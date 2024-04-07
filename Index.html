@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderNote</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footerstyle.css">
+</head>
+
+<body>
+    <header>
+        <button class="sidebarbutton" onclick="toggleSidebar()">☰</button>
+        
+        <div class="sidebar" id="sidebar">
+            <!-- Real-time date and time -->
+            <br>
+            <p id="datetime" ></p>
+            <div class="hero" id="hero">
+                <img src="wandertitle.png" alt="title">
+                <p class="post">Created by: James Neri</p>
+            </div>
+            <ul>
+                <ul>
+                    <li><a href="#home" onclick="closeSidebar()">Home</a></li>
+                    <li><a href="#about" onclick="closeSidebar()">About</a></li>
+                    <li><a href="#travel" onclick="closeSidebar()">Travel</a></li>
+                    <li><a href="#pics" onclick="closeSidebar()">Photography</a></li>
+                    <li><a href="#contact" onclick="closeSidebar()">Contact</a></li>
+                </ul>
+            </ul>
+        </div>
+
+    </header>
+    <!--home-->
+    <section class="home" id="home">
+        <img src="roof.png" alt="HomePic">
+        <div class="home-content">
+            <ul class="light-wrap">
+                <li class="light"></li>
+                <li class="light"></li>
+                <li class="light"></li>
+                <li class="light"></li>
+                <li class="light"></li>
+                <li class="light"></li> 
+                <li class="light"></li> 
+                <li class="light"></li> 
+            </ul>
+            <h1>Wander Note</h1>
+            <br>
+            <p>           
+            "Wandering is the ballad of exploration, where each footfall paints a verse, and every route unveils a chorus of
+            revelation, resonating with the melody of discovery and the harmony of the unseen beauty."</p>
+            <div class="button-container">
+                <button onclick="window.location.href='#travel'">Travel</button>
+                <button onclick="window.location.href='#pics'">Photography</button>
+                <button onclick="toggleMusic()">
+                    <i class="fa-solid fa-music" style="color: #3b08d4;"></i>
+                </button>
+            </div>
+        </div>
+            <audio id="musicPlayer" src="Persona 5 OST - 29 - Beneath the Mask [Extended].mp3" loop></audio>
+        <div class="home1">
+            <img src="Characters-removebg-preview (1).png" alt="Your Image">
+        </div>
+    </section>
+
+    <!--about me-->
+    <section class="about" id="about">
+        <div class="container">
+            <h1 class="heading"> <span>About Us</span></h1> <!-- Move the heading here -->
+            <br>
+            <div class="row">
+                <img src="desktop-wallpaper-anime-scenery-buildings-sky-rooftop-cityscape-＃datviewtho-artwork-clouds-school-resolution-anime-school-building.jpg" alt="Your Image" class="about-image">
+                <div class="description">
+                    <p>In the bustling metropolis of Sumaru City, <span>The Protagonist and his friends</span>, embark on a
+                    journey of self-discovery and redemption within the enigmatic realm of the Shadow Symphony created by Maestro. As they navigate treacherous
+                    dungeons and engage in strategic battles against formidable adversaries, each character confronts their inner demons and
+                    forges deep bonds with their personas. Within the digital pages of <span>WanderNote</span>, readers are immersed in a tale of
+                    resilience, camaraderie, and the enduring power of the human spirit, as He and his friends strive to
+                    illuminate the shadows threatening to engulf their world and forge a path towards salvation.
+                </div>
+            </div>
+            <br>
+            <!-- Switched positions for the second row -->
+            <div class="row1">
+                <div class="description1">
+                    <p>Despite the trials and tribulations that beset their world, The Protagonist and his friends remain steadfast in their
+                    resolve to craft enduring memories. As they stand on the brink of parting ways, their hearts heavy with the weight of
+                    impending separation, they are fueled by a shared determination to seize the present moment. Each click of the camera,
+                    each shared laugh, becomes a testament to their unyielding spirit and unwavering friendship. For them, the pursuit of
+                    memories transcends the confines of time and space, serving as a beacon of hope in the face of uncertainty. As they
+                    embark on their individual paths, they carry with them the indelible imprint of their shared adventures, a testament to
+                    the enduring power of camaraderie and the bonds forged amidst life's trials.</p>
+
+                </div>
+                <img src="P.jpg" alt="Another Image" class="about-image1">
+            </div>
+        </div>
+    </section>
+
+    <!--Travel-->
+<section class="travel" id="travel">
+    <h1 class="heading"><span>Travel</span></h1>
+    <div class="container">
+        <!-- First Card -->
+        <div class="card">
+            <img src="family.jpg" alt="Video Thumbnail" class="video-thumbnail"
+                data-video-src="What A Weekend_ A Travel Vlog.mp4">
+            <h2 class="card-title">What A Weekend</h2>
+            <p class="card-description">Experience the thrill of a weekend getaway in this exciting travel vlog.</p>
+            <button class="card-button">Watch Video</button>
+        </div>
+        <!-- Second Card -->
+        <div class="card1">
+            <img src="gaming comment.png" alt="Picture Thumbnail" class="picture-thumbnail"
+            data-pic-src="gaming comment.png" data-likes="4K" data-hearts="459">
+            <h2 class="card-title">Can I Get This or Not??!!</h2>
+            <p class="card-description">Planning to get Gaming Chair, Is it fine for me or not?.</p>
+            <button class="card-button1">View Picture</button>
+        </div>
+        <!-- Third Card -->
+        <div class="card2">
+            <img src="on the way.png" alt="Picture Thumbnail" class="picture-thumbnail"
+            data-pic-src="on the way.png" data-likes="3.1K" data-hearts="1.2K">
+            <h2 class="card-title">Going Home</h2>
+            <p class="card-description">On the Way, Bye Cagayan.</p>
+            <button class="card-button2">View Picture</button>
+        </div>
+        <!-- Fourth Card -->
+        <div class="card3">
+            <img src="talisayan.png" alt="Picture Thumbnail" class="picture-thumbnail"
+            data-pic-src="talisayan.png" data-likes="3.6K" data-hearts="999">
+            <h2 class="card-title">Sightseeing in Talisayan</h2>
+            <p class="card-description">During our Ride home, we encounter a new and improve Talisayan Seafood Restaurant. A Park with Excitement!!!</p>
+            <button class="card-button3">View Picture</button>
+        </div>
+    </div>
+</section>
+    <!-- Photography -->
+    <section class="pics" id="pics">
+        <h1 class="heading"> <span>Photography</span></h1>
+        <div class="container">
+            <!-- First Card -->
+            <div class="card">
+                <img src="photogrpahy.png" style="max-height:150px;";alt="Video Thumbnail" class="video-thumbnail1"
+                    data-video1-src="lv_0_20240402150946.mp4">
+                <h2 class="card-title">My Photo Slides</h2>
+                <p class="card-description">Video with Recent Events in the Past Week!!</p>
+                <button class="card-button4">Watch Video</button>
+            </div>
+            <!-- Second Card -->
+            <div class="card1">
+                <img src="IMG20240325164658.jpg" alt="Picture Thumbnail" class="picture-thumbnail1"
+                 data-pic1-src="IMG20240325164658.jpg" data-likes="2.1K" data-hearts="611">
+                <h2 class="card-title">F.R.I.E.N.D.S</h2>
+                <p class="card-description">Discover the friendship through breathtaking photographs.</p>
+                <button class="card-button5">View Picture</button>
+            </div>
+            <!-- Third Card -->
+            <div class="card2">
+                <img src="IMG20240401142756.jpg" alt="Picture Thumbnail" class="picture-thumbnail1"
+                 data-pic1-src="IMG20240401142756.jpg" data-likes="2K" data-hearts="245">
+                <h2 class="card-title">F.R.I.E.N.D.S Monents with Pics</h2>
+                <p class="card-description">Moments with Others in F.R.I.E.N.D.S next Season</p>
+                <button class="card-button6">View Picture</button>
+            </div>
+            <!-- Fourth Card -->
+            <div class="card3">
+                <img src="IMG20240331175457.jpg" alt="Picture Thumbnail" class="picture-thumbnail1"
+                 data-pic1-src="IMG20240331175457.jpg" data-likes="3.8K" data-hearts="702">
+                <h2 class="card-title">Easter Sunday</h2>
+                <p class="card-description">Join us on an Special Day at Duka Bay and Illuminada Garden Resort</p>
+                <button class="card-button7">View Picture</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+    <h1 class="heading"><span>Contact</span></h1><br><br><br>
+    <div class="container">
+        <form method="post">
+            <label for="fname">UserName</label>
+            <input type="text" id="user" name="user" placeholder="Your UserName">
+            <label for="lname">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email Address..">
+            <label for="fname">Subject</label>
+            <input type="text" id="user" name="user" placeholder="Your Topic..">
+            <label for="subject">Description</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="min-height:150px;max-height:200px"></textarea>
+    
+            <button type="submit" value="Submit">Submit</button>
+        </form>
+    </div>
+    <h1 class="icon-container">
+        <div class="icon"><i class="fa-solid fa-location-dot"
+         style="color: #663fd9; text-transform: lowercase;"></i>&nbsp;&nbsp;Japan</div>
+        <div class="icon"><i class="fa-solid fa-phone" style="color: #663fd9;"></i>&nbsp;&nbsp;0945-0122-691</div>
+        <div class="icon"><i class="fa-solid fa-envelope" style="color: #663fd9;"></i>&nbsp;&nbsp;kamito1920@gmail.com
+        </div></h1>
+    </div>
+    </section>
+
+
+
+
+    <footer>
+        <div class="socialIcons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-google-plus"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footerNav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#travel">Travel</a></li>
+                <li><a href="#pics">Photography</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2023; Designed by <span class="designer">James Neri</span></p>
+    </footer>
+<script src="script.js"></script>
+</body>
+
+</html>

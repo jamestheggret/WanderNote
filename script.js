@@ -119,6 +119,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     overlay.remove(); // Remove the overlay when the popup is closed
                     document.body.classList.remove("popup-open"); // Remove the class when the popup is closed
                     sidebar.style.pointerEvents = "auto"; // Re-enable pointer events on the sidebar
+                    if (isMusicPlayingBeforePopup) {
+                        resumeMusic();
+                    }
                 }, 500); // Wait for the animation duration before removing the elements
             });
 
@@ -300,6 +303,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     overlay.remove(); // Remove the overlay when the popup is closed
                     document.body.classList.remove("popup-open"); // Remove the class when the popup is closed
                     sidebar.style.pointerEvents = "auto"; // Re-enable pointer events on the sidebar
+                    if (isMusicPlayingBeforePopup) {
+                        resumeMusic();
+                    }
                 }, 500); // Wait for the animation duration before removing the elements
             });
 
@@ -463,5 +469,3 @@ document.addEventListener("DOMContentLoaded", function () {
         pictureElement.src = currentPicture;
     }
 });
-
-/*Contact*/

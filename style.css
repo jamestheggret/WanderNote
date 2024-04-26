@@ -146,7 +146,44 @@
      z-index: 9999;
      /* Ensure the button appears above other elements */
  }
+/*Fixed Header*/
+.fixed-header {
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(11, 10, 10, 0.8);
+    padding: 15px 0;
+    transition: top 0.3s;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.728);
+    border-radius: 10px;
+}
 
+.fixed-header .title-container {
+    display: flex;
+    justify-content: center;
+    /* Center align the content horizontally */
+    align-items: center;
+    /* Center align the content vertically */
+    height: 100%;
+    /* Make the container take up full height */
+}
+
+.fixed-header .title-container img {
+    max-width: 150px;
+    margin-right: 10px;
+    margin-top: 105px;
+    /* Add some margin between the image and text */
+}
+
+.fixed-header .title-container p {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+    margin-top: 107px;
+    /* Remove any default margin */
+}
  /*Home*/
  .home {
      display: flex;
@@ -509,18 +546,21 @@
      padding: 1rem;
      position: absolute;
  }
-
+.about .heading{
+    margin-top: -10px;
+}
  .heading span {
      color: rgb(255, 255, 255);
     border-bottom: 0.5rem solid #fff4;
  }
 
- .about {
+ .about, .travel ,.pics {
      align-items: center;
-     z-index: 10;
  }
 
- .about .row {
+.about .row,
+.travel .row,
+.pics .row {
      display: flex;
      align-items: center;
      justify-content: center;
@@ -529,7 +569,9 @@
 
  }
 
- .about .row1 {
+ .about .row1,
+.travel .row1,
+.pics .row1 {
      display: flex;
      align-items: center;
      justify-content: center;
@@ -537,27 +579,52 @@
      padding: 0 0;
      margin-bottom: 70px;
  }
+ .travel .row2,
+ .pics .row2 {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     padding: 0 0;
+     margin-bottom: 100px;
+ }
 
  /* About US*/
+ .my-image {
+     height: 55rem;
+     width: 28%;
+     /* Adjust width as needed */
+     /* Add spacing between image and text */
+     margin-left: 250px;
+     border-radius: 20px;
+ }
+ .about h2{
+    font-size: 30px;
+
+ }
+ .about h3 {
+     font-size: 15px;
+ }
  .about-image {
     height: 40rem;
-     width: 40%;
+    width: 40%;
      /* Adjust width as needed */
-     margin-right: 20px;
      /* Add spacing between image and text */
-     margin-left: 60px;
+     margin-left: 100px;
      border-radius: 20px;
+     border: 2px solid #3347ff;
  }
 
  .about-image1 {
      width: 40%;
      height: 40rem;
      /* Adjust width as needed */
-     margin-right: 20rem;
+     margin-right: 17rem;
      /* Add spacing between image and text */
      margin-left: -20px;
      /* Move the image to the left */
      border-radius: 20px;
+     border: 2px solid #3347ff
  }
 
  .description {
@@ -572,16 +639,15 @@
      padding: 3rem 0;
      font-weight: normal;
      width: 85%;
+    line-height: 1.6;
  }
 
  /* Add this style to the .description1 class to adjust its position */
  .description1 {
      flex: 1;
-     padding: 5px 53px;
+     padding: 5px 40px;
      /* Add padding to the description for further distance */
-     margin-left: 20px;
-     /* Add spacing between image and text */
-     margin-right: 20px;
+     margin-left: 60px;
      /* Add spacing between image and text */
  }
 
@@ -591,8 +657,8 @@
      padding: 2rem 0;
      font-weight: normal;
      width: 100%;
+    line-height: 1.6;
  }
-
  .description span,
  .description1 span {
      color: #7733ff;
@@ -604,210 +670,98 @@
      align-items: center;
      /* Optional: Center the content horizontally */
  }
-.travel {
-    padding: 20rem 0;
-    text-align: center;
-    min-height: 300px;
-    /* Set a minimum height for the travel section */
+ /*Video*/
+.video-container {
+    width: 80%;
+    margin: 30px auto;
 }
 
-.travel .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /* Responsive grid layout */
-    gap: 50px;
-    /* Gap between grid items */
-    max-width: 1200px;
-    margin: 0 auto;
+.vid-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.pics{
-    padding: 20rem 0;
-    text-align: center;
-    min-height: 300px;
-    /* Set a minimum height for the travel section */
+.col {
+    flex-basis: 50%;
+    min-width: 250px;
 }
 
-.pics .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /* Responsive grid layout */
-    gap: 50px;
-    /* Gap between grid items */
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.card,.card1,.card2,.card3 {
-    display: grid;
-    margin-top: 170px;
-    position:relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+.feat {
+    width: 65%;
+    margin: auto;
+    position: relative;
+    border-radius: 10px;
     overflow: hidden;
-    height: 370px; /* Adjust the height as needed */
+    border: 2px solid #3347ff;
 }
 
-
-.card img,.card1 img,.card2 img,.card3 img {
-    width: 100%;
-    max-height: 150px;
-    object-fit: cover;
-    border-radius: 20px;
-}
-
-
-
-.card-title {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.card-description {
-    font-size: 14px;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.card-button,.card-button1,.card-button2,.card-button3{
-    background-color: #fff;
-    color: #000;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
+.play-btn, .play-btn1 {
+    width: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.card-button4,.card-button5,.card-button6,.card-button7{
-    background-color: #fff;
-    color: #000;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.video-popup.show {
+    display: block;
+    pointer-events: auto;
 }
-.card-button:hover ,.card-button1:hover,.card-button2:hover,
-.card-button3:hover {
-    background-color: #000;
-    color: #fff;
-}
-.card-button4:hover ,.card-button5:hover,.card-button6:hover,
-.card-button7:hover {
-    background-color: #000;
-    color: #fff;
-}
-.popup {
+
+.video-popup {
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%)scale(0);
-    z-index: 5000;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 30px;
-    /* Initially hide the popup */
-    transition: transform 0.5s ease;
-    /* Existing styles */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.popup.show {
-    transform: translate(-50%, -50%) scale(1);
-    /* Scale up to 1 for zoom effect */
-}
-.popup>.heart-count {
-    /* Adjust margin to create space between heart icon and button */
-    margin-right: 10px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    padding: 20px;
+    border-radius: 10px;
+    width: 800px;
+    pointer-events: none;
 }
 
-.popup>button {
-    /* Align button next to heart icon */
-    align-self:flex-end;
-}
-.popup>button:hover {
-    /* Align button next to heart icon */
-    background-color: #000;
+#myVideo, #myVideo1 {
+    width: 100%;
+    height: auto;
 }
 
-video {
-    width: 97%;
-    height: 500px;
-    margin-bottom: 20px;
-    /* Add margin at the bottom */
-}
-img {
-    width: 97%;
-    height: 500px;
-    margin-bottom: 20px;
-    /* Add margin at the bottom */
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
 }
 
-.close-icon {
+.close-btn, .close-btn1 {
     position: absolute;
     top: 10px;
-    right: 14px;
-    color: var(--blue);
-    font-size: 30px;
+    right: 2%;
+    width: 30px;
     cursor: pointer;
 }
 
-.like {
-    position: absolute;
-    bottom: 9px;
-    /* Position like icon at the bottom */
-    left: 60px;
-    /* Adjust left position */
-}
-.like-count {
-    position: absolute;
-    bottom: 18px;
-    /* Position like count at the bottom */
-    left: 110px;
-    /* Adjust left position */
-    color: white;
-    /* Example styling */
-    font-size: 16px;
-    /* Example styling */
-}
-.heart {
-    position: absolute;
-    bottom: 9px;
-    /* Position heart icon at the bottom */
-    left: 200px;
-    /* Adjust left position */
-}
-.heart-count {
-    position: absolute;
-    bottom: 18px;
-    /* Position heart count at the bottom */
-    left: 250px;
-    /* Adjust left position */
-    color: white;
-    /* Example styling */
-    font-size: 16px;
-    /* Example styling */
-}
 body.popup-open {
     overflow: hidden;
     /* Prevent scrolling when the popup is open */
+    position: relative;
+    /* Add position relative to body */
 }
 
-body.popup-open .container {
-    filter: blur(10px);
-    /* Apply blur effect to the content */
-}
-
-.overlay {
+body.popup-open::after {
+    content: "";
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Adjust opacity to darken the background */
+    z-index: 9998;
+    /* Ensure the overlay is below the popup */
 }
-
 /*Contact*/
 .contact label{
     font-size: 14px;
@@ -829,7 +783,7 @@ button[type=submit] {
     padding: 7px 30px;
     background-color: #e8e4d8;
     color: black;
-    border: none;
+    border: 2px solid rgb(113, 113, 113);
     border-radius: 20px;
     cursor: pointer;
     margin-left: auto;
@@ -838,7 +792,7 @@ button[type=submit] {
 }
 
 button[type=submit]:hover {
-    background-color: black;
+    background-color:#333;
     color: #e8e4d8;
 }
 .contact{
@@ -847,7 +801,7 @@ button[type=submit]:hover {
 .contact .container {
     border-radius: 5px;
     border: 4px var(--blue) solid;
-    background-color: #383737;
+    background-color: #000000;
     padding: 20px;
     width: 35%; /* Adjust width of the form container */
     margin-right: 20px; /* Add margin for spacing between form and icons */
@@ -892,9 +846,6 @@ button[type=submit]:hover {
          width: 50rem;
      }
 
-     .about {
-         z-index: 10;
-     }
 
      .sidebar {
          width: 47%;
@@ -938,12 +889,21 @@ button[type=submit]:hover {
          padding: 0 0;
          /* Adjust padding for smaller screens */
      }
+     .row2 {
+        flex-direction: column;
+         align-items: center;
+         margin-left: 0;
+         /* Reset the left margin */
+         padding: 0 0;
+         /* Adjust padding for smaller screens */
+     }
 
      .description,
      .description1 {
          padding: 1rem;
          /* Adjust padding for smaller screens */
          text-align: center;
+        line-height: 1.6;
      }
 
      .description {
@@ -961,7 +921,12 @@ button[type=submit]:hover {
          margin-right: 0;
          /* Reset margin */
      }
-
+    .my-image {
+        width: 80%;
+         /* Adjust width as needed */
+         /* Center the images horizontally */
+         margin-bottom: 1rem;
+        }
      .about-image {
          width: 80%;
          /* Adjust width as needed */
@@ -1005,189 +970,44 @@ button[type=submit]:hover {
          font-size: 1.3rem;
          /* Adjust font size if needed */
      }
-     /*Travel Video*/
-     .travel{
-        padding: 15rem 0;
-     }
-     .travel .heading{
-         margin-bottom: 200rem;
-        /* Adjust the margin for smaller screens */
-        margin-right: 0;
-        margin-left: 0;
-        margin-top: 0;
-    }
-    
-
-     .travel .container{
-        max-width: 350px;
-        display: flex;
-        flex-direction: column;
-
-     }
-            .card,.card1,.card2,.card3 {
-                display: grid;
-                /* Display cards in a single column */
-                 /* Allow cards to adjust their height based on content */
-                 max-width: 250px;
-                 /* Adjust maximum width for smaller screens */
-                 margin-top: 1rem;
-                 /* Add smaller margin at the top of each card */
-
-             }
-    
-             .card img,.card1 img,.card2 img,.card3 img {
-                 border-radius: 10px;
-                 /* Decrease border radius for images on smaller screens */
-             }
-    
-             .card-title {
-                 font-size: 18px;
-                 /* Decrease font size of card titles for smaller screens */
-             }
-    
-             .card-description {
-                 font-size: 12px;
-                 /* Decrease font size of card descriptions for smaller screens */
-             }
-    
-             .card-button,.card-button1,.card-button2,.card-button3 {
-                 padding: 6px 12px;
-                 /* Decrease padding of card buttons for smaller screens */
-                 font-size: 12px;
-                 /* Decrease font size of card buttons for smaller screens */
-             }
-         
-    .popup {
-        width: 80%;
-         /* Adjust the width of the popup */
+    .video-container {
+        width: 100%; /* Adjust width for smaller screens */
+        margin: 0 auto; /* Center the video container */
     }
 
-     video,img {
-         height: auto;
-           /* Allow the video to resize based on its aspect ratio */
-         width: 100%;
-          /* Ensure the video takes up the full width of the popup */
-     }
+    .video-popup {
+        width: 90%; /* Adjust width for smaller screens */
+    }
 
-     .like,
-      .heart {
-          font-size: 17px;
-          /* Adjust font size for smaller screens */
-        }
+    .video-wrapper {
+        width: 100%; /* Adjust width for smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
 
-    .like-count,
-     .heart-count {
-          font-size: 12px;
-         /* Adjust font size for smaller screens */
-       }
+    #myVideo, #myVideo1 {
+        width: 100%; /* Ensure the video fills the container */
+        height: auto; /* Maintain aspect ratio */
+    }
 
-    .close-icon {
-         font-size: 25px;
-         /* Adjust font size for smaller screens */
-         top: 5px;
-         /* Move close icon slightly down */
-         right: 10px;
-         /* Move close icon slightly to the right */
-        }
-    
-
-        /*Photography*/
-        .pics {
-            padding: 15rem 0;
-        }
-    
-        .pics .heading {
-            margin-bottom: 200rem;
-            /* Adjust the margin for smaller screens */
-            margin-right: 0;
-            margin-left: 0;
-            margin-top: 0;
-        }
-    
-    
-        .pics .container {
-            max-width: 350px;
-            display: flex;
-            flex-direction: column;
-    
-        }
-    
-        .card1,.card2,.card3,.card4 {
-            display: grid;
-            /* Display cards in a single column */
-            /* Allow cards to adjust their height based on content */
-            max-width: 250px;
-            /* Adjust maximum width for smaller screens */
-            margin-top: 1rem;
-            /* Add smaller margin at the top of each card */
-        }
-    
-        .card1 img,.card2 img,.card3 img,.card4 img {
-            border-radius: 10px;
-            /* Decrease border radius for images on smaller screens */
-        }
-    
-        .card-title {
-            font-size: 18px;
-            /* Decrease font size of card titles for smaller screens */
-        }
-    
-        .card-description {
-            font-size: 12px;
-            /* Decrease font size of card descriptions for smaller screens */
-        }
-    
-        .card-button4,.card-button5,.card-button6,.card-button7 {
-            padding: 6px 12px;
-            /* Decrease padding of card buttons for smaller screens */
-            font-size: 12px;
-            /* Decrease font size of card buttons for smaller screens */
-        }
-    
-        .popup {
-            width: 80%;
-            /* Adjust the width of the popup */
-        }
-    
-        video,
-        img {
-            height: auto;
-            /* Allow the video to resize based on its aspect ratio */
-            width: 100%;
-            /* Ensure the video takes up the full width of the popup */
-        }
-    
-        .like,
-        .heart {
-            font-size: 17px;
-            /* Adjust font size for smaller screens */
-        }
-    
-        .like-count,
-        .heart-count {
-            font-size: 12px;
-            /* Adjust font size for smaller screens */
-        }
-    
-        .close-icon {
-            font-size: 25px;
-            /* Adjust font size for smaller screens */
-            top: 5px;
-            /* Move close icon slightly down */
-            right: 10px;
-            /* Move close icon slightly to the right */
-        }
+    .close-btn, .close-btn1 {
+        top: 5px; /* Adjust top position for smaller screens */
+        right: 5px; /* Adjust right position for smaller screens */
+    }
         /*Contact*/
-        .contact .heading {
-        top: 3rem;
+    .contact .heading {
+         top: 3rem;
      }
     }
 @media only screen and (max-width: 768px) {
-    .home h1 {
-        font-size: 3rem; /* Adjust font size for smaller screens */
-        width: 80%;
+    .home img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        z-index: -100;
     }
-
     .home1 img {
         height: 60%;
         width: 60%;
@@ -1195,25 +1015,26 @@ button[type=submit]:hover {
     }
 
     .home p {
-        font-size: 1.3rem; /* Adjust font size for smaller screens */
-        width: 80%; /* Adjust width for smaller screens */
+        font-size: 1.7rem; /* Adjust font size for smaller screens */
+        width: 100%; /* Adjust width for smaller screens */
     }
 
     .home-content {
         width: 50rem; /* Adjust width for smaller screens */
+        margin-bottom: 100px;
     }
 
-    .about {
-        z-index: 10; /* Adjust z-index for smaller screens if needed */
+    section#about{
+        margin-top: -170px;
     }
     #datetime {
-        font-size: 14px;
+        font-size: 15px;
         margin-top: 1rem;
     }
 
     .sidebar {
-        width: 45%; /* Adjust width for smaller screens */
-        left: -110%; /* Initially hide the sidebar */
+        width: 55%; /* Adjust width for smaller screens */
+        left: -100%; /* Initially hide the sidebar */
         z-index: 1001; /* Adjust z-index for smaller screens if needed */
     }
 
@@ -1226,7 +1047,7 @@ button[type=submit]:hover {
     }
 
     .hero .post {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .hero ul {
@@ -1236,7 +1057,7 @@ button[type=submit]:hover {
     .sidebar ul li {
         list-style-type: none;
         padding:26px;
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .hero ul li a {
@@ -1253,7 +1074,16 @@ button[type=submit]:hover {
     .heading {
         margin-bottom: 10rem; /* Adjust margin for smaller screens */
     }
-
+    .fixed-header{
+        width: 100%;
+        left: 0;
+    }
+    .fixed-header .title-container {
+       margin-left: 80px;
+    }
+    .fixed-header .title-container img{
+        margin-left: 50px;
+    }
     .row {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items horizontally */
@@ -1267,6 +1097,24 @@ button[type=submit]:hover {
         margin-left: 0; /* Reset left margin */
         padding: 0; /* Reset padding */
     }
+    .pics .row1 {
+        flex-wrap: nowrap;
+        flex-direction: column-reverse; /* Stack items vertically in reverse order */
+        margin-right: 40px;; /* Reset left margin */
+        padding: 0; /* Reset padding */
+    }
+    .pics .description1{
+        width: 100%;
+        margin-left: -21px;
+        /*margin-right: 60px;*/
+        padding: 0;
+    }     
+    .row2 {
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        margin-left: 0; /* Reset left margin */
+        padding: 0; /* Reset padding */
+    }
 
     .description,
     .description1 {
@@ -1274,144 +1122,105 @@ button[type=submit]:hover {
         text-align: center; /* Center text horizontally */
     }
 
-    .description,.description1 {
-        width: 75%; /* Adjust width for smaller screens */
-        margin-left: 50px; /* Auto margin for left side */
-        margin-right: 2px; /* Auto margin for right side */
+    .about .description{
+        width: 105%; /* Adjust width for smaller screens */
+        margin-left: 10px; /* Auto margin for right side */
         padding: 0;
+        line-height: 1.6;
+    }
+    .pics .row2 .about-image{
+        margin-left: -25px;
+    }
+    .pics .row2 p{
+        margin-left: -19px;
+    }
+    .description,.description1 {
+        width: 105%; /* Adjust width for smaller screens */
+        margin-right: 20px; /* Auto margin for right side */
+        padding: 0;
+        line-height: 1.6;
     }
 
     .description1 {
-        width: 65%; /* Adjust width for smaller screens */
+        width: 95%; /* Adjust width for smaller screens */
         margin-left: auto; /* Auto margin for left side */
         margin-right: auto; /* Auto margin for right side */
         padding: 0;
     }
-
+    .my-image {
+        height: 25rem;
+        width: 95%; /* Adjust width for smaller screens */
+        margin-left: -50px; /* Auto margin for left side */
+    }
+    .about h2{
+        width: 80%;
+        font-size: 25px;
+    }
+    .about h3 {
+        width: 80%;
+        font-size: 13px;
+    }
     .about-image {
         height: 25rem;
-        width: 60%; /* Adjust width for smaller screens */
-        margin-left: auto; /* Auto margin for left side */
-        margin-right: auto; /* Auto margin for right side */
+        width: 95%; /* Adjust width for smaller screens */
     }
 
     .about-image1 {
         height: 25rem; /* Adjust height for smaller screens */
-        width: 60%; /* Adjust width for smaller screens */
+        width: 95%; /* Adjust width for smaller screens */
         margin-left: auto; /* Auto margin for left side */
-        margin-right: auto; /* Auto margin for right side */
         margin-bottom: 1rem; /* Add some bottom margin */
     }
-
-    .button-container {
-        margin-left: 0; /* Reset left margin */
-        margin-right: 0; /* Reset right margin */
+    .pics .about-image1 {
+        height: 25rem; /* Adjust height for smaller screens */
+        width: 100%; /* Adjust width for smaller screens */
+        margin-left: -20px; /* Auto margin for left side */
+        margin-bottom: 1rem; /* Add some bottom margin */
+    }
+    .video-container {
+        width: 100%; /* Adjust width for smaller screens */
+        margin: 0 auto; /* Center the video container */
     }
 
-    .button-container button {
-        margin: 20px 10px; /* Increase margin to create more distance */
-        padding: 10px 20px; /* Adjust padding if needed */
-        font-size: 1.3rem; /* Adjust font size if needed */
+    .video-popup {
+        width: 90%; /* Adjust width for smaller screens */
     }
 
-    .travel .heading {
-        margin-bottom: 180rem; /* Adjust margin for smaller screens */
-        margin-right: 0; /* Reset margin */
-        margin-left: 0; /* Reset margin */
-        margin-top: 0; /* Reset margin */
-    }
-    .pics .heading {
-        margin-bottom: 170rem; /* Adjust margin for smaller screens */
-        margin-right: 0; /* Reset margin */
-        margin-left: 0; /* Reset margin */
-        margin-top: 10; /* Reset margin */
+    .video-wrapper {
+        width: 100%; /* Adjust width for smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
     }
 
-    .travel .container,.pics .container {
-        max-width: 350px; /* Adjust max width for smaller screens */
-        display: flex; /* Display container as flex */
-        flex-direction: column; /* Stack items vertically */
+    #myVideo, #myVideo1 {
+        width: 100%; /* Ensure the video fills the container */
+        height: auto; /* Maintain aspect ratio */
     }
-
-    .card,.card1,.card2,.card3 {
-        display: grid; /* Display cards in a single column */
-        max-width: 250px; /* Adjust max width for smaller screens */
-        margin-top: 12rem; /* Add smaller margin at the top of each card */
-        margin-bottom: -120px;
+    .pics .feat{
+        margin-left: 30px;
     }
-
-    .card img,.card1 img,.card2 img,.card3 img {
-        border-radius: 10px; /* Decrease border radius for images on smaller screens */
-    }
-
-    .card-title {
-        font-size: 18px; /* Decrease font size of card titles for smaller screens */
-    }
-
-    .card-description {
-        font-size: 12px; /* Decrease font size of card descriptions for smaller screens */
-    }
-
-    .card-button,.card-button1,.card-button2,.card-button3 {
-        padding: 6px 12px; /* Decrease padding of card buttons for smaller screens */
-        font-size: 12px; /* Decrease font size of card buttons for smaller screens */
-    }
-    .card-button4,.card-button5,.card-button6,.card-button7 {
-        padding: 6px 12px; /* Decrease padding of card buttons for smaller screens */
-        font-size: 12px; /* Decrease font size of card buttons for smaller screens */
-    }
-
-    .popup {
-        width: 80%; /* Adjust width of the popup for smaller screens */
-    }
-
-    video,img {
-        height:350px; /* Allow the video to resize based on its aspect ratio */
-        width: 100%; /* Ensure the video takes up the full width of the popup */
-    }
-
-    .like{
-        font-size: 17px;
-        left: 35px; /* Adjust font size for smaller screens */
-    }
-    .heart {
-        font-size: 17px; /* Adjust font size for smaller screens */
-        left: 130px;
-    }
-
-    .like-count{
-        font-size: 12px; /* Adjust font size for smaller screens */
-        left: 80px;
-    }
-    .heart-count {
-        font-size: 12px; /* Adjust font size for smaller screens */
-        left: 175px;
-    }
-
-    .close-icon {
-        font-size: 25px; /* Adjust font size for smaller screens */
-        top: 5px; /* Move close icon slightly down */
-        right: 10px; /* Move close icon slightly to the right */
+    .close-btn, .close-btn1 {
+        top: 5px; /* Adjust top position for smaller screens */
+        right: 5px; /* Adjust right position for smaller screens */
     }
     .contact {
-            flex-direction: column; /* Stack elements vertically */
-            align-items: center; /* Center items horizontally */
-        }
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items horizontally */
+    }
 
-        .contact .container {
-            width: 80%; /* Set width to 80% of the screen */
-            margin-right: 0; /* Remove right margin */
-            margin-top: 70px;
-            margin-bottom: 20px; /* Add bottom margin for spacing */
-            order: 2;
-        }
+    .contact .container {
+         width: 80%; /* Set width to 80% of the screen */
+         margin-right: 0; /* Remove right margin */
+         margin-top: 70px;
+         margin-bottom: 20px; /* Add bottom margin for spacing */
+         order: 2;
+    }
 
-        .contact .icon-container {
-            width: 80%; /* Set width to 80% of the screen */
-            display: flex;
-            justify-content: space-between; /* Distribute icons evenly */
-            margin-top: 60px; /* Add top margin for spacing */
-            order: 1;
+    .contact .icon-container {
+         width: 80%; /* Set width to 80% of the screen */
+        display: flex;
+         justify-content: space-between; /* Distribute icons evenly */
+        margin-top: 60px; /* Add top margin for spacing */
+        order: 1;
         }
 
         .contact .icon {
@@ -1421,7 +1230,7 @@ button[type=submit]:hover {
 
 @media only screen and (min-width: 768px) and (max-width: 1380px) {
         .home h1 {
-            font-size: 3rem;
+            font-size: 3.8rem;
             /* Adjust font size for laptops */
             width: 80%;
         }
@@ -1434,9 +1243,9 @@ button[type=submit]:hover {
         }
 
         .home p {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             /* Adjust font size for laptops */
-            width: 80%;
+            width: 90%;
             /* Adjust width for laptops */
         }
 
@@ -1444,10 +1253,13 @@ button[type=submit]:hover {
             width: 50rem;
             /* Adjust width for laptops */
         }
-
-        .about {
-            z-index: 10;
-            /* Adjust z-index for laptops if needed */
+        .about .heading {
+            margin-top: 20px;
+        }
+        
+        .my-image{
+            width: 34%;
+            margin-left: 150px;
         }
         .about-image1 {
             width: 40%;
@@ -1458,9 +1270,8 @@ button[type=submit]:hover {
         }
 
         /* Adjust other styles for laptops as needed */
-
         .sidebar {
-            width: 15%;
+            width: 25%;
             /* Adjust sidebar width for laptops */
             left: -130%;
             /* Initially hide the sidebar */
@@ -1488,33 +1299,20 @@ button[type=submit]:hover {
             color: #eee;
             margin-bottom: 10px;
         }
-        /*Travel and Pics*/
-        .travel .container, .pics .container {
-            max-width: 900px;
-            /* Adjust container width for laptops */
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            margin: 0 auto;
-            /* Center the container horizontally */
+        .about h2{
+            font-size: 22px;
         }
-
-        .card, .card1, .card2,.card3 {
-            display: grid;
-            margin-top: 170px;
-             position: relative;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 20px;
-            overflow: hidden;
-            width: 280px;
-            
+        .about h3{
+            font-size: 11px;
         }
-        .card, .card2{
-            left: 80px;
+        .about p{
+            font-size: 12.4px;
         }
-        .card1, .card3{
-            left: 25px;
-        }
-        .popup.show {
-            width: 70%;
+        .travel .description p,
+        .travel .description1 p,
+        .pics .description p,
+        .pics .description1 p {
+            font-size: 11.5px;
         }
         /*Contact*/
         .contact .heading {
